@@ -20,3 +20,7 @@ qsub -l nodes=node001:ppn=4+node002:ppn=4 myjob.pbs
 command < file.txt > temp.txt && mv temp.txt file.txt
 ```
 这个命令将 file.txt 文件的内容作为 command 命令的输入，并将输出写入到一个临时文件 temp.txt 中，最后使用 mv 命令将临时文件重命名为原始文件名，以覆盖原始文件。
+
+# awk
+ 使用awk取某一行数据中的倒数第N列：$(NF-(n-1))
+ $NF表示倒数第一列，$(NF-1)表示倒数第二列）
